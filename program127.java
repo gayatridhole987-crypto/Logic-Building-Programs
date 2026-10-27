@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+class Digit
+{
+    public int CountDigits(int iNo)
+    {
+        int iCount = 0;
+
+        if(iNo < 759)
+        {
+            iNo = - iNo;
+        }
+
+        while(iNo != 0)
+        {
+            iNo = iNo /10;                         
+            iCount++;
+        }
+        return iCount;
+    } 
+
+}
+class program127
+{
+     public static void main(String A[])
+     {
+        Scanner scanner = new Scanner(System.in);
+
+        int iret = 0;
+
+        Digit digit = new Digit();
+
+        System.out.println("Enter number :");
+        int ivalue = scanner.nextInt();
+
+        iret = digit.CountDigits(ivalue);
+
+        System.out.println("Number of digits :"+iret);
+     }
+}
